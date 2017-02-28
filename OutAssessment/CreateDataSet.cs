@@ -21,6 +21,10 @@ namespace Assesment
             GetData();
         }
 
+        /// <summary>
+        /// Read csv file and create namelist
+        /// </summary>
+        /// <returns></returns>
         public List<PersonData> GetData()
         {
             NameList = new List<PersonData>();
@@ -47,6 +51,9 @@ namespace Assesment
             return NameList;
         }
 
+        /// <summary>
+        /// output Address's to Address.txt
+        /// </summary>
         public void WriteAddressList()
         {
             Dictionary<string, int> freq = GetAddress();
@@ -61,6 +68,9 @@ namespace Assesment
             }
         }
 
+        /// <summary>
+        /// Output NameFrequency List to Frequency.txt
+        /// </summary>
         public void WriteNameList()
         {
             Dictionary<string, int> freq = GetFrequency();
@@ -75,6 +85,10 @@ namespace Assesment
             }
         }
 
+        /// <summary>
+        /// generate name frequency List
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, int> GetFrequency()
         {
             Dictionary<string, int> freq = new Dictionary<string, int>();
@@ -106,6 +120,10 @@ namespace Assesment
             return freq;
         }
 
+        /// <summary>
+        /// Generete Address list
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, int> GetAddress()
         {
             Dictionary<string, int> freq = new Dictionary<string, int>();
